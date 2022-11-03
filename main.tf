@@ -19,7 +19,7 @@ resource "vercel_project" "front-project" {
     type = "github"
     repo = "eamaranti-bx/bx-front-${var.bx-project-name}"
   }
-  
+  depends_on = [github_branch.production]
 }
 resource "vercel_project_domain" "front-project-domain" {
   project_id = vercel_project.front-project.id
