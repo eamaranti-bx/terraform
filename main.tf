@@ -15,7 +15,7 @@ resource "vercel_project" "front-project" {
     repo = "eamaranti-bx/bx-front-${var.bx-project-name}"
   }
 }
-resource "vercel_project_domain" "front-project-domain-qa" {
+resource "vercel_project_domain" "front-project-domain" {
   project_id = vercel_project.front-project.id
   domain     = "${var.bx-project-name}.blue.cl"
   git_branch = "production"
