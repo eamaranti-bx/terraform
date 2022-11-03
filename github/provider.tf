@@ -6,10 +6,7 @@ terraform {
     }
   }
 }
-
-# Configure the GitHub Provider
-
+# Configure the Github provider
 provider "github" {
-  token = GITHUB_TOKEN
-  owner = "eamaranti-bx"
+  token = var.token
 }
