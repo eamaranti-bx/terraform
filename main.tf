@@ -21,8 +21,3 @@ resource "vercel_project" "front-project" {
   }
   depends_on = [github_branch.production]
 }
-resource "vercel_project_domain" "front-project-domain" {
-  project_id = vercel_project.front-project.id
-  domain     = "${var.bx-project-name}.blue.cl"
-  depends_on = [github_branch.production, vercel_project.front-project]
-}
