@@ -20,13 +20,3 @@ resource "vercel_project_domain" "front-project-domain-qa" {
   domain     = "${var.bx-project-name}.blue.cl"
   git_branch = "production"
 }
-resource "vercel_project_domain" "front-project-domain-qa" {
-  project_id = vercel_project.front-project.id
-  domain     = "${var.bx-project-name}.qa.blue.cl"
-  git_branch = "staging"
-}
-resource "vercel_project_domain" "front-project-domain-dev" {
-  project_id = vercel_project.front-project.id
-  domain     = "${var.bx-project-name}.dev.blue.cl"
-  git_branch = "development"
-}
