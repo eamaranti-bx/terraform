@@ -7,6 +7,10 @@ resource "github_repository" "repo" {
     repository = "nextjs-starter-bx"
   }
 }
+resource "github_branch" "production" {
+  repository = "bx-front-${var.bx-project-name}"
+  branch     = "production"
+}
 resource "vercel_project" "front-project" {
   name      = "bx-front-${var.bx-project-name}"
   framework = "nextjs"
@@ -18,5 +22,4 @@ resource "vercel_project" "front-project" {
 resource "vercel_project_domain" "front-project-domain" {
   project_id = vercel_project.front-project.id
   domain     = "${var.bx-project-name}.blue.cl"
-  git_branch = "production"
 }
