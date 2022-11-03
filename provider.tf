@@ -7,6 +7,10 @@ terraform {
   }
 }
 # Configure the Github provider
+variable "GITHUB_TOKEN" {
+  type = string
+  description = "github token."
+}
 provider "github" {
-  token = "${var.github_token}"
+  token = "${var.GITHUB_TOKEN}"
 }
