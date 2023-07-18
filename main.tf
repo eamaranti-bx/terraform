@@ -2,6 +2,7 @@ resource "github_repository" "repo" {
   name        = "bx-front-${var.bx-project-name}"
   description = "Repositorio de ${var.bx-project-name}"
   visibility = "public"
+  auto_init = true
   template {
     owner      = "eamaranti-bx"
     repository = "nextjs-starter-bx"
