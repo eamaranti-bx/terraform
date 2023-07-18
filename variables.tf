@@ -1,5 +1,5 @@
 variable "bx-project-name" {
-  default      = "proyecto-test-base2"
+  default      = "proyecto-test-base3"
   type        = string
   description = "nombre del proyecto"
   sensitive   = true
